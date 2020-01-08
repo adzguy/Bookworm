@@ -16,6 +16,7 @@
 		2530261523C448A300160C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2530261323C448A300160C80 /* LaunchScreen.storyboard */; };
 		2530261D23C5BBBF00160C80 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530261C23C5BBBF00160C80 /* AddBookView.swift */; };
 		2530261F23C5CAA500160C80 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530261E23C5CAA500160C80 /* RatingView.swift */; };
+		2530262123C5CEA200160C80 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530262023C5CEA200160C80 /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2530261623C448A300160C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2530261C23C5BBBF00160C80 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		2530261E23C5CAA500160C80 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		2530262023C5CEA200160C80 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				2530260C23C448A000160C80 /* ContentView.swift */,
 				2530261E23C5CAA500160C80 /* RatingView.swift */,
 				2530261C23C5BBBF00160C80 /* AddBookView.swift */,
+				2530262023C5CEA200160C80 /* EmojiRatingView.swift */,
 				2530260E23C448A300160C80 /* Assets.xcassets */,
 				2530261323C448A300160C80 /* LaunchScreen.storyboard */,
 				2530261623C448A300160C80 /* Info.plist */,
@@ -157,6 +160,7 @@
 			files = (
 				2530260623C448A000160C80 /* AppDelegate.swift in Sources */,
 				2530260B23C448A000160C80 /* Bookworm.xcdatamodeld in Sources */,
+				2530262123C5CEA200160C80 /* EmojiRatingView.swift in Sources */,
 				2530260D23C448A000160C80 /* ContentView.swift in Sources */,
 				2530261F23C5CAA500160C80 /* RatingView.swift in Sources */,
 				2530260823C448A000160C80 /* SceneDelegate.swift in Sources */,
