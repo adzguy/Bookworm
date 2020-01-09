@@ -10,6 +10,10 @@ import SwiftUI
 import CoreData
 
 struct DetailView: View {
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentaionMode
+    
+    @State private var showingDeleteAlert = false
     
     let book: Book
     
@@ -42,7 +46,26 @@ struct DetailView: View {
                 Spacer()
             }
         }
-        //.navigationBarTitle(Text(book.title) ?? "Unkown Book", displayMode: .inline)
+        .navigationBarTitle(Text(book.title ?? "Unkown Book"), displayMode: .inline)
+            .alert(isPresented: $showingDeleteAlert) {
+                Alert(title: Text("Delete book"), message: Text("Are you sure?"), primaryButton: .destructive(Text("Delete")) {
+                        self.deleteBook()
+                    }, secondaryButton: .cancel()
+                )
+        }
+            .navigationBarItems(trailing: Button(action: {
+                self.showingDeleteAlert = true
+            }) {
+                Image(systemName: "trash")
+            })
+    }
+    
+    func deleteBook() {
+        moc.delete(book)
+        
+        // uncomment this line if you want to make the deletion permanent
+        // try? self.moc.save()
+        presentaionMode.wrappedValue.dismiss()
     }
 }
 
