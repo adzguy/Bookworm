@@ -28,6 +28,7 @@ struct ContentView: View {
                         VStack(alignment: .leading) {
                             Text(book.title ?? "Unknown Title")
                                 .font(.headline)
+                                .foregroundColor( book.rating < 2 ? Color.red : Color.primary)
                             Text(book.author ?? "Unknown Author")
                                 .foregroundColor(.secondary)
                         }
@@ -35,7 +36,7 @@ struct ContentView: View {
                 }
             .onDelete(perform: deleteBooks)
             }
-                .navigationBarTitle("Bookworm")
+            .navigationBarTitle("Bookworm")
             .navigationBarItems(leading: EditButton(), trailing:
                 Button(action: {
                     self.showingSheet.toggle()

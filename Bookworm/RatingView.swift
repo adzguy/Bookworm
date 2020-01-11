@@ -11,6 +11,7 @@ import SwiftUI
 struct RatingView: View {
     
     @Binding var rating: Int
+    //@Binding var title: String
     
     var label = ""
     

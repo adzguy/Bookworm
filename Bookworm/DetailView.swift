@@ -33,6 +33,7 @@ struct DetailView: View {
                         .clipShape(Capsule())
                         .offset(x: -5, y: -5)
                 }
+                
                 Text(self.book.author ?? "Unknown author")
                     .font(.title)
                     .foregroundColor(.secondary)
@@ -44,7 +45,11 @@ struct DetailView: View {
                     .font(.largeTitle)
                 
                 Spacer()
+                Text(self.dateString())
+                    .font(.body)
+                    .padding(.bottom)
             }
+            
         }
         .navigationBarTitle(Text(book.title ?? "Unkown Book"), displayMode: .inline)
             .alert(isPresented: $showingDeleteAlert) {
@@ -66,6 +71,14 @@ struct DetailView: View {
         // uncomment this line if you want to make the deletion permanent
         // try? self.moc.save()
         presentaionMode.wrappedValue.dismiss()
+    }
+    
+    func dateString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd, yyyy"
+        let dateString = formatter.string(from: book.date ?? Date())
+        
+        return dateString
     }
 }
 

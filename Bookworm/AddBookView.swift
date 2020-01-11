@@ -49,10 +49,18 @@ struct AddBookView: View {
                         
                         self.presentationMode.wrappedValue.dismiss()
                     }
+                    .disabled(hasValidInput == false)
                 }
             }
         .navigationBarTitle("Add Book")
         }
+    }
+    
+    var hasValidInput: Bool {
+        if title.isEmpty || author.isEmpty || genre.isEmpty {
+            return false
+        }
+        return true
     }
 }
 
